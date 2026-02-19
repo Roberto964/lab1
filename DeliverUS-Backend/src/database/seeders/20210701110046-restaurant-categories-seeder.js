@@ -17,7 +17,7 @@ module.exports = {
       ], {})
   },
 
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface, Sequelize) => { // sirve para borrar las tablas
     /**
      * Add commands to revert seed here.
      *
