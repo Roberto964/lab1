@@ -31,10 +31,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DOUBLE
       },
-      averageServiceMinutes: {
+      /* averageServiceMinutes: {
         allowNull: true,
         type: Sequelize.DOUBLE
       },
+      */
       email: {
         allowNull: true,
         type: Sequelize.STRING
@@ -52,10 +53,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       status: { // creo por lo  que he buscado q los enumerados son asi
-        Online: 'Online', // estar atento a lo q digan en el lab
-        Offline: 'Offline',
-        closed: 'closed',
-        temporallyClosed: 'temporallyClosed'
+        allowNull: false,
+        type: Sequelize.ENUM('Online', 'Offline', 'closed', 'temporallyClosed'),
+        defaultValue: 'Offline'
       },
       /* Tengo q crear una foreign key para representar la relacion 1:N que tienen el restaurante con el owner */
       userId: { // foerign key de usuario
