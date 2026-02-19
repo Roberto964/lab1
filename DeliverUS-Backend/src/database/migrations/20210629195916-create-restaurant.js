@@ -76,9 +76,9 @@ module.exports = {
           model: {
             tableName: 'RestaurantCategories'
           },
-          key: 'id'
-        },
-        onDelete: 'cascade'
+          key: 'id' /* He quitado el ondelete Cascade porque en el modelo
+          solo lo tiene la clave foreign a usuario */
+        }
       },
       createdAt: {
         allowNull: false,
